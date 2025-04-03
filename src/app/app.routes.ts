@@ -5,7 +5,7 @@ import { SignupComponent } from './components/signup/signup.component';
 
 // Define the application routes
 export const appRoutes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },  // Redirect to home page by default
+    { path: '', redirectTo: 'login', pathMatch: 'full' },  // Redirect to home page by default
     { path: '', component: HomeComponent },  // Home page route
     { path: 'home', component: HomeComponent },  // Home page route
     { path: 'login', component: LoginComponent },  // Home page route
