@@ -38,7 +38,8 @@ export class HomeComponent {
         "/assets/images/home/mini-game-1.png",
         "/assets/images/home/mini-game-2.png",
         "/assets/images/home/mini-game-3.png",
-        "/assets/images/home/mini-game-4.png"
+        "/assets/images/home/mini-game-4.png",
+        "/assets/images/home/mini-game-5.png"
       ]
     },
     {

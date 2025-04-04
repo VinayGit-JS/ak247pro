@@ -1,4 +1,23 @@
 @import "tailwindcss";
+
 @theme {
-    --breakpoint-md: 48.0625rem;
-  }
+  --breakpoint-md: 48.0625rem;
+  --color-secondary: #20A2A0;
+  --color-danger: #FF0000;
+}
+
+//main container
+.dashboard-body{
+  min-height: 100vh;
+  gap: 0 20px;
+  background: var(--color-secondary);
+  padding: 18px;
+  display: flex;
+  
+}
+.main{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}

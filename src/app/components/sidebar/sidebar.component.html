@@ -1,1 +1,15 @@
-<p>sidebar works!</p>
+<div class="sidebar">
+    <div class="bg-[#FFFFFF1A] px-2 rounded-xl min-w-[200px] py-[20px]">
+        <div class="logo bg-white px-4 py-2 rounded-full">
+            <img class="w-[150px]" src="/assets/images/logo.svg" alt="">
+        </div>
+        <ul class="mt-5 space-y-2 px-[4px]">
+            <li *ngFor="let item of menuItems">
+                <a href="#" [classList]="'flex items-center gap-x-2 gap-3 p-3 hover:bg-teal-600 rounded-md '+ (item.active?'bg-white text-black': 'text-white')">
+                    <img [src]="item.icon" alt="" class="w-[20px] h-[20px]">
+                    {{ item.text }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
