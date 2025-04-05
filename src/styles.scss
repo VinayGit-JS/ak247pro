@@ -21,3 +21,16 @@
   border-radius: 20px;
   overflow: hidden;
 }
+
+.top-bar{
+  .wallet{
+    .wallet-drop-down{
+      display: none;
+    }
+    &:hover{
+      .wallet-drop-down{
+        display: block;
+      }
+    }
+  }
+}
