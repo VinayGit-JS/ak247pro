@@ -3,8 +3,11 @@
         <div class="flex flex-col min-h-[100vh] md:flex-row bg-white shadow-lg rounded-xl overflow-hidden">
             <!-- Register Form Section -->
             <div class="p-4 w-full md:w-1/2 relative flex justify-center items-center">
-                <div class="bg-[#AEAEAE1A] z-[2]  rounded-[10px] w-3/4  backdrop-blur-[4px] p-4">
-                    <h2 class="text-2xl font-bold mb-6">Register</h2>
+                <div class="bg-[#AEAEAE1A] z-[2]  rounded-[10px] md:w-3/4 w-full  backdrop-blur-[4px] p-4">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="md:text-2xl text-3xl font-bold ">Register</h2>
+                        <img src="/assets/images/logo.svg" class="w-[120px] md:hidden block">
+                    </div>
 
                     <label class="block text-gray-700">Enter your name</label>
                     <input type="text" placeholder="Please enter your name"
@@ -54,19 +57,21 @@
 
             <!-- Illustration Section -->
             <div
-                class="hidden md:flex md:w-1/2 bg-[url(assets/images/login/circle.png)] bg-contain bg-no-repeat bg-right relative justify-center items-center p-8">
-                <div class="bg-[#FFBD3F] rounded-full absolute left-0 bottom-[20%] w-[30px] h-[30px]"></div>
-                <div class="bg-[#F778ADE0] rounded-full w-[44px] h-[44px] absolute left-[10%] top-[30%] "></div>
+            class="flex md:w-1/2 relative  bg-[url(assets/images/login/circle.png)] bg-contain bg-no-repeat bg-right relative justify-center items-center p-8">
 
-                <img src="/assets/images/logo.svg" class="w-[200px] absolute top-[10%] left-0 ">
+            <div class="bg-[#FFBD3F] rounded-full absolute left-0 bottom-[30%] w-[30px] h-[30px]"></div>
+            <div class="bg-[#F778ADE0] rounded-full w-[44px] h-[44px] absolute left-[10%] top-[30%] "></div>
+
+            <img src="/assets/images/logo.svg" class="w-[200px] md:block hidden absolute top-[10%] left-0 ">
+            <div  class="md:block hidden">
                 <div class="absolute top-4 right-4 flex items-center space-x-4 mr-[40%]">
                     <a href="#" class="text-white text-xl">🔍</a>
                     <button
-                        class="text-white bg-[red] font-bold px-4 py-1 rounded-full border-[1px] border-[#525252]">Sign
-                        in</button>
+                        class="text-white bg-[red] font-bold px-4 py-1 rounded-full border-[1px] border-[#525252]">Sign in</button>
                 </div>
-                <img src="/assets/images/login/skateboard_guy.png" alt="Skater Illustration" class="w-60 h-auto">
             </div>
+            <img src="/assets/images/login/skateboard_guy.png" alt="Skater Illustration" class="w-60 h-auto">
+        </div>
         </div>
     </div>
 </div>

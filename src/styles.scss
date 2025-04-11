@@ -7,29 +7,129 @@
 }
 
 //main container
-.dashboard-body{
+.dashboard-body {
   min-height: 100vh;
   gap: 0 20px;
   background: var(--color-secondary);
   padding: 18px;
   display: flex;
-  
+
 }
-.main{
+
+.main {
   width: 100%;
   background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
 }
 
-.top-bar{
-  .wallet{
-    .wallet-drop-down{
+.categories {
+  .slider {
+    gap: 0 22px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    .item {
+      min-width: calc(20% - 20px);
+      max-width: calc(20% - 20px);
+      scroll-snap-align: start;
+    }
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+
+  .dot {
+    display: none;
+  }
+}
+
+.top-bar {
+  .wallet {
+    .wallet-drop-down {
       display: none;
     }
-    &:hover{
-      .wallet-drop-down{
+
+    &:hover {
+      .wallet-drop-down {
         display: block;
+      }
+    }
+  }
+}
+
+
+//profile page
+.profile{
+  .tabs{
+    .tab{
+      &.active{
+        position: relative;
+        &::before{
+          content: '';
+          position: absolute;
+          height: 4px;
+          translate:0 -50%;
+          top: 100%;
+          width: 100%;
+          background-color: var(--color-secondary);
+        }
+      }
+    }
+  }
+  #personal{
+    table{
+      td{
+        padding: 20px;
+      }
+    }
+  }
+}
+@media (max-width:786px) {
+  .dashboard-body {
+    gap: 0;
+    padding: 0;
+
+    .main {
+      border-radius: 0;
+    }
+  }
+
+  .categories {
+    .slider {
+      gap: 0 8px;
+      .item {
+        min-width: 32%;
+      }
+    }
+
+    .dot {
+      display: block;
+    }
+  }
+  .profile{
+    .tabs{
+      .tab{
+        &.active{
+          position: relative;
+          &::before{
+            content: '';
+            position: absolute;
+            height: 4px;
+            translate:0 -50%;
+            top: 100%;
+            width: 100%;
+            background-color: var(--color-secondary);
+          }
+        }
+      }
+    }
+    #personal{
+      table{
+        td{
+          padding: 10px;
+        }
       }
     }
   }

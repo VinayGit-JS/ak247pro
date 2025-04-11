@@ -31,6 +31,11 @@ export class DashboardComponent {
         "/assets/images/home/game-2.png",
         "/assets/images/home/game-3.png",
         "/assets/images/home/game-4.png",
+        "/assets/images/home/game-5.png",
+        "/assets/images/home/game-1.png",
+        "/assets/images/home/game-2.png",
+        "/assets/images/home/game-3.png",
+        "/assets/images/home/game-4.png",
         "/assets/images/home/game-5.png"
       ]
     },
@@ -115,4 +120,50 @@ export class DashboardComponent {
       ]
     }
   ];
+  noOfItemInSlider = 3;
+
+  getDots(length: number): any[] {
+    return Array(Math.ceil(length / 3));
+  }
+  navigate(iItem: number, iDot: number): void {
+    const category = document.getElementById(`category-${iItem}`);
+    const slider = document.getElementById(`slider-${iItem}`);
+    const item = slider?.querySelector(".item") as HTMLElement | null;
+    const dots = category?.querySelectorAll(".dot");
+  
+    const itemWidth = item?.clientWidth ?? 0;
+  
+    // Scroll the slider
+    if (slider && itemWidth) {
+      const scrollAmount = itemWidth * this.noOfItemInSlider * iDot;
+      slider.scrollTo({ left: scrollAmount, behavior: "smooth" });
+    }
+  
+    // Update dot colors
+    dots?.forEach((dot, index) => {
+      const el = dot as HTMLElement;
+      el.style.backgroundColor = (index === iDot) 
+        ? "var(--color-secondary)" 
+        : "#d9d9d9";
+    });
+  }
+  
+  handleScroll(event: Event, iItem: number) {
+    const slider = event.target as HTMLElement;
+    const item = slider.querySelector('.item');
+    const itemWidth = item?.clientWidth || 1;
+  
+    const scrollLeft = slider.scrollLeft;
+    const activeDot = Math.round(scrollLeft / (itemWidth * this.noOfItemInSlider));
+  
+    const category = document.getElementById(`category-${iItem}`);
+    const dots = category?.querySelectorAll('.dot');
+  
+    if (dots) {
+      dots.forEach((dot, index) => {
+        (dot as HTMLElement).style.backgroundColor = index === activeDot ? 'var(--color-secondary)' : '#d2d2d2';
+      });
+    }
+  }
+  
 }

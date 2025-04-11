@@ -1,1 +1,116 @@
-<p>profile works!</p>
+<div class="dashboard-body">
+    <app-sidebar></app-sidebar>
+    <div class="main">
+        <app-top-bar />
+        <div class="banner flex justify-center max-w-[1280px] mx-auto lg:px-8">
+            <img src="/assets/images/dashboard/banner.png" class="w-full" alt="">
+        </div>
+        <app-wallet-summery />
+        <div class="mt-5 lg:px-8 px-2">
+            <h4 class="text-[14px]  text-[#000000c9]">Account Setting</h4>
+            <h3 class="text-[20px] font-[500]">My Profile</h3>
+            <p class="text-[#000000c9] mt-2">You have full control to manage own account setting.</p>
+        </div>
+        <div class="profile lg:px-8 px-2 ">
+            <div class="tabs font-bold flex md:gap-x-10 gap-x-4 border-b-2">
+                <div class="tab py-4 text-secondary active">
+                    <span>Personal</span>
+                </div>
+                <div class="tab py-4">
+                    <span>Billing</span>
+                </div>
+                <div class="tab py-4">
+                    <span>Notification</span>
+                </div>
+                <div class="tab py-4">
+                    <span>Setting</span>
+                </div>
+            </div>
+            <section id="personal">
+                <h4 class="mt-5 font-bold text-[24px]">Personal Information</h4>
+                <p class="mt-2">Business info, like your name and mobile, no that you use on whatsBot API Platform.</p>
+                <form action="" class="mt-4">
+                    <table class="w-full mx-auto p-4 border border-secondary rounded shadow">
+                        <!-- Full Name -->
+                        <tr class="border-b border-secondary py-3">
+                            <td class="font-medium md:text-[16px] text-[12px]">Full name</td>
+                            <td class="md:text-[16px] text-[12px]">Deepak Sharma</td>
+                        </tr>
+
+                        <!-- Mobile Number -->
+                        <tr class="border-b border-secondary py-3">
+                            <td class="font-medium md:text-[16px] text-[12px]">Mobile number</td>
+                            <td class="md:text-[16px] text-[12px]">+91 8979108932</td>
+                        </tr>
+
+                        <!-- Email -->
+                        <tr class="border-b border-secondary py-3">
+                            <td class="font-medium md:text-[16px] text-[12px]">Email ID</td>
+                            <td class="font-semibold md:text-[16px] text-[12px]">Abhiksharma285&#64;gmail.com</td>
+                        </tr>
+
+                        <!-- Old Password -->
+                        <tr class="border-b border-secondary py-3">
+                            <td class="font-medium md:text-[16px] text-[12px]">Old Password</td>
+                            <div class="flex items-center gap-2">
+                                <td class="md:text-[16px] text-[12px]">*******************</td>
+                                <i class="fa fa-eye cursor-pointer"></i>
+                            </div>
+                        </tr>
+
+                        <!-- New Password -->
+                        <tr class="border-b border-secondary py-3">
+                            <td class="font-medium md:text-[16px] text-[12px]">New Password</td>
+                            <td class="flex items-center gap-2 md:text-[16px] text-[12px]">
+                                <span>*******************</span>
+                                <i class="fa fa-eye cursor-pointer"></i>
+                            </td>
+                        </tr>
+
+                        <!-- Profile Image -->
+                        <tr class="border-b border-secondary py-3">
+                            <td class="font-medium md:text-[16px] text-[12px]">Profile image</td>
+                            <td>
+                                <img src="/assets/images/dashboard/avatar.png" alt="Profile"
+                                    class="h-10 w-10 rounded-full object-cover">
+                            </td>
+                        </tr>
+
+                        <!-- Profile Image Upload -->
+                        <tr class="border-b border-secondary py-3">
+                            <td class="font-medium md:text-[16px] text-[12px]">Profile image upload</td>
+                            <td class="flex gap-2 md:text-[16px] text-[12px]">
+                                <input type="file"  class="border p-1 w-[100px]">
+                                <button class="bg-teal-600 text-white px-3 py-1 rounded">Upload</button>
+                            </td>
+                        </tr>
+
+                        <!-- Address -->
+                        <tr class="border-b border-secondary py-3">
+                            <td class="font-medium md:text-[16px] text-[12px]">Address</td>
+                            <td class="md:text-[16px] text-[12px]">21/89 madhya pradesh mp</td>
+                        </tr>
+
+                        <!-- State -->
+                        <tr class="border-b border-secondary py-3">
+                            <td class="font-medium md:text-[16px] text-[12px]">State</td>
+                            <td class="md:text-[16px] text-[12px]">madhya pradesh</td>
+                        </tr>
+
+                        <!-- Country -->
+                        <tr class="border-b border-secondary py-3">
+                            <td class="font-medium md:text-[16px] text-[12px]">Country</td>
+                            <td class="md:text-[16px] text-[12px]">India</td>
+                        </tr>
+
+                        <!-- Save Button -->
+                        <tr class="text-right mt-4">
+                            <td colspan="2"><button class="bg-secondary text-white md:px-6 md:py-2 px-4 py-2 rounded md:text-[16px] text-[12px]">Save</button></td>
+                        </tr>
+                    </table>
+
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
