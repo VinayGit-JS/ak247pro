@@ -2,6 +2,7 @@
 
 @theme {
   --breakpoint-md: 48.0625rem;
+  --breakpoint-xsm: 26.563rem;
   --color-secondary: #20A2A0;
   --color-danger: #FF0000;
 }
@@ -30,8 +31,8 @@
     scroll-snap-type: x mandatory;
 
     .item {
-      min-width: calc(20% - 20px);
-      max-width: calc(20% - 20px);
+      min-width: calc(20% - 18px);
+      max-width: calc(20% - 18px);
       scroll-snap-align: start;
     }
 
@@ -61,16 +62,17 @@
 
 
 //profile page
-.profile{
-  .tabs{
-    .tab{
-      &.active{
+.profile {
+  .tabs {
+    .tab {
+      &.active {
         position: relative;
-        &::before{
+
+        &::before {
           content: '';
           position: absolute;
           height: 4px;
-          translate:0 -50%;
+          translate: 0 -50%;
           top: 100%;
           width: 100%;
           background-color: var(--color-secondary);
@@ -78,14 +80,16 @@
       }
     }
   }
-  #personal{
-    table{
-      td{
+
+  #personal {
+    table {
+      td {
         padding: 20px;
       }
     }
   }
 }
+
 @media (max-width:786px) {
   .dashboard-body {
     gap: 0;
@@ -99,8 +103,30 @@
   .categories {
     .slider {
       gap: 0 8px;
+      overflow-y: hidden;
+
       .item {
         min-width: 32%;
+        position: relative;
+        &::before{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top:0;
+          left: 0;
+          content: '';
+          background: #fff8;
+          border-radius: 10px;
+        }
+        img{
+          border-radius: 10px;
+        }
+        .active {
+          scale: 1.2;
+        }
+        &:has(.active){
+          z-index: 9;
+        }
       }
     }
 
@@ -108,16 +134,18 @@
       display: block;
     }
   }
-  .profile{
-    .tabs{
-      .tab{
-        &.active{
+
+  .profile {
+    .tabs {
+      .tab {
+        &.active {
           position: relative;
-          &::before{
+
+          &::before {
             content: '';
             position: absolute;
             height: 4px;
-            translate:0 -50%;
+            translate: 0 -50%;
             top: 100%;
             width: 100%;
             background-color: var(--color-secondary);
@@ -125,9 +153,10 @@
         }
       }
     }
-    #personal{
-      table{
-        td{
+
+    #personal {
+      table {
+        td {
           padding: 10px;
         }
       }

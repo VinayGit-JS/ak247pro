@@ -1,140 +1,165 @@
-<div class="header border-2 border-[red] justify-between flex px-4 py-2"
-    style="background: linear-gradient(259deg, red 0%, white 75%);">
+<div class="home">
+    <div class="header border-2 border-[red] justify-between flex px-4 py-2"
+        style="background: linear-gradient(259deg, red 0%, white 75%);">
 
-    <div class="left">
-        <div class="logo">
-            <img src="/assets/images/logo.svg" alt="">
-        </div>
-    </div>
-    <div class="right gap-x-2 flex items-center">
-        <button class="rounded-full border-1 border-white text-white font-bold px-4 py-2">
-            Login
-        </button>
-        <button class="bg-white rounded-full border-1 border-white text-black font-bold px-4 py-2">
-            Register
-        </button>
-    </div>
-</div>
-
-<div class="banner">
-    <img src="/assets/images/home/banner.png" class="w-full">
-</div>
-
-<div class="featured max-w-[1280px] mx-auto py-6 grid lg:grid-cols-4">
-    <div class="item">
-        <img class="w-full" src="/assets/images/home/feature-1.png" alt="">
-    </div>
-    <div class="item">
-        <img class="w-full" src="/assets/images/home/feature-2.png" alt="">
-    </div>
-    <div class="item">
-        <img class="w-full" src="/assets/images/home/feature-1.png" alt="">
-    </div>
-    <div class="item">
-        <img class="w-full" src="/assets/images/home/feature-2.png" alt="">
-    </div>
-
-</div>
-<div class="flex space-x-3 justify-between max-w-[1280px] mx-auto py-2">
-    <button *ngFor="let item of navItems"
-        class="flex items-center px-4 py-2 rounded-lg shadow-md transition-all duration-300 border">
-        <img [src]="item.icon" alt="{{ item.text }}" class="w-6 h-6 mr-2" />
-        <span class="font-semibold">{{ item.text }}</span>
-    </button>
-</div>
-<div class="category-item max-w-[1280px] mx-auto py-6">
-    <div class="title flex gap-x-4 ">
         <div class="left">
-            <img src="/assets/images/home/icons/lottery.png" alt="">
+            <div class="logo">
+                <img src="/assets/images/logo.svg" class="md:w-auto w-[80px]" alt="">
+            </div>
         </div>
-        <div class="right">
-            <h4 class="font-bold text-[22px]">LOTTERY</h4>
-            <p class="text-[#6E6E6E]">All game are independently developed by our team, fun, fair, and safe</p>
-        </div>
-    </div>
-    <div class="slider flex mt-8 gap-x-4">
-        <div class="item w-1/4">
-            <img src="/assets/images/home/lottery-1.png" class="w-full" alt="">
-        </div>
-        <div class="item w-1/4">
-            <img src="/assets/images/home/lottery-2.png" class="w-full" alt="">
-        </div>
-        <div class="item w-1/4">
-            <img src="/assets/images/home/lottery-3.png" class="w-full" alt="">
-        </div>
-        <div class="item w-1/4">
-            <img src="/assets/images/home/lottery-4.png" class="w-full" alt="">
+        <div class="right gap-x-2 flex items-center md:text-[16px] text-[10px]">
+            <button class="rounded-full border-1 border-white text-white font-bold md:px-4 px-2 md:py-2 py-1  ">
+                Login
+            </button>
+            <button class="bg-white rounded-full border-1 border-white text-black font-bold md:px-4 px-2 md:py-2 py-1 ">
+                Register
+            </button>
         </div>
     </div>
-</div>
-<div *ngFor="let category of categories" class="categories">
-    <div class="category-item max-w-[1280px] mx-auto py-6">
-        <div class="title bg-[url(/assets/images/home/pastel.png)] bg-contain bg-no-repeat flex gap-x-4 items-center">
+
+    <div class="banner">
+        <img src="/assets/images/home/banner.png" class="w-full">
+    </div>
+
+    <div class="featured max-w-[1280px] mx-auto py-6 grid grid-cols-4">
+        <div class="item">
+            <img class="w-full" src="/assets/images/home/feature-1.png" alt="">
+        </div>
+        <div class="item">
+            <img class="w-full" src="/assets/images/home/feature-2.png" alt="">
+        </div>
+        <div class="item">
+            <img class="w-full" src="/assets/images/home/feature-1.png" alt="">
+        </div>
+        <div class="item">
+            <img class="w-full" src="/assets/images/home/feature-2.png" alt="">
+        </div>
+
+    </div>
+    <div class="flex space-x-3 md:justify-between justify-center gap-y-2 max-w-[1280px] mx-auto py-2 flex-wrap">
+        <button *ngFor="let item of navItems"
+            class="flex items-center md:px-4 px-2 md:py-2 py-1 rounded-lg shadow-md transition-all duration-300 border">
+            <img [src]="item.icon" alt="{{ item.text }}" class="w-6 h-6 mr-2" />
+            <span class="font-semibold md:text-[16px] text-[12px]">{{ item.text }}</span>
+        </button>
+    </div>
+    <div class="category-item max-w-[1280px] mx-auto py-6 px-4">
+        <div class="title flex gap-x-4 ">
             <div class="left">
-                <img [src]="category.icon">
+                <img src="/assets/images/home/icons/lottery.png" class="md:w-auto w-[30px]" alt="">
             </div>
             <div class="right">
-                <h4 class="font-bold text-[22px]">{{category.title}}</h4>
+                <h4 class="font-bold md:w-auto w-[30px]">LOTTERY</h4>
+                <p class="text-[#6E6E6E] md:text-[16px] text-[12px]">All game are independently developed by our team, fun, fair, and safe</p>
             </div>
         </div>
-        <div class="slider flex mt-8 lg:gap-x-8">
-            <div *ngFor="let game of category.games" class="item w-1/4">
-                <img [src]="game" class="w-full" alt="">
+        <div class="slider flex mt-8 gap-x-4">
+            <div class="item w-1/4">
+                <img src="/assets/images/home/lottery-1.png" class="w-full" alt="">
             </div>
-        </div>
-    </div>
-</div>
-<div class="winner max-w-[1280px] mx-auto mt-10">
-    <div class="flex justify-center">
-        <div class="title bg-[url(/assets/images/home/pastel.png)] bg-contain bg-no-repeat flex gap-x-4 items-center">
-            <div class="left">
-                <img src="/assets/images/home/icons/winner.png">
+            <div class="item w-1/4">
+                <img src="/assets/images/home/lottery-2.png" class="w-full" alt="">
             </div>
-            <div class="right">
-                <h4 class="font-bold text-[22px]">AK247 PRO WINNER'S</h4>
+            <div class="item w-1/4">
+                <img src="/assets/images/home/lottery-3.png" class="w-full" alt="">
+            </div>
+            <div class="item w-1/4">
+                <img src="/assets/images/home/lottery-4.png" class="w-full" alt="">
             </div>
         </div>
     </div>
-    <div class="flex gap-x-[50px] mt-10">
-        <div class="box scale-[0.9] flex w-1/3 gap-x-4 rounded-tr-[100px]  p-4"
-            style="box-shadow: 0px 4px 14px 0px #00000040;">
-            <div class="left w-1/3">
-                <img src="/assets/images/home/winner.png" class="w-full" alt="">
+    <div *ngFor="let category of categories; let cIndex = index" class="categories">
+        <div [id]="'category-'+cIndex" class="category-item max-w-[1280px] mx-auto py-6 lg:px-8 px-2">
+            <div
+                class="title bg-[url(/assets/images/home/pastel.png)] bg-contain bg-no-repeat flex gap-x-4 items-center">
+                <div class="left">
+                    <img class="md:w-auto w-[30px]" [src]="category.icon">
+                </div>
+                <div class="right">
+                    <h4 class="font-bold md:text-[22px] text-[16px]">{{category.title}}</h4>
+                </div>
             </div>
-            <div class="right w-2/3">
-                <h5 class="text-black font-bold text-[25px]">
-                    DEEPAK
-                </h5>
-                <h6 class="text-[#FF3F3F] font-bold text-[20px]">WON ₹3.5 LAKH+</h6>
-                <p class="text-[#757575] mt-4">I NEVER KNEW POOL WAS SUCH AN EASY GAMES. I STARTED PLAYING POOL ON WINZO
-                    AND NOW I PLAY POOL EVERYDAY AND WIN PRIZES WHILE ENJOYING THE GAME AS WELL</p>
+            <div class="flex items-center relative px-8">
+                <div class="left p-2 absolute left-0 z-[9]" (click)="left(cIndex)">
+                    <img src="/assets/icons/arrow-left.svg" class="rotate-[180deg]" alt="">
+                </div>
+                <div class="slider w-full flex mt-8">
+                    <div *ngFor="let game of category.games" class="item w-1/4 my-4">
+                        <div [ngClass]="game.isActive?'active':''">
+                            <img [src]="game.src" class="w-full" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="right p-2 absolute right-0" (click)="right(cIndex)">
+                    <img src="/assets/icons/arrow-left.svg" alt="">
+                </div>
             </div>
         </div>
-        <div class="box scale-[1.1] flex w-1/3 gap-x-4 border-4 border-[#FF8181] rounded-tr-[100px]  p-4">
-            <div class="left w-1/3">
-                <img src="/assets/images/home/winner.png" class="w-full" alt="">
-            </div>
-            <div class="right w-2/3">
-                <h5 class="text-black font-bold text-[25px]">
-                    DEEPAK
-                </h5>
-                <h6 class="text-[#FF3F3F] font-bold text-[20px]">WON ₹3.5 LAKH+</h6>
-                <p class="text-[#757575] mt-4">I NEVER KNEW POOL WAS SUCH AN EASY GAMES. I STARTED PLAYING POOL ON WINZO
-                    AND NOW I PLAY POOL EVERYDAY AND WIN PRIZES WHILE ENJOYING THE GAME AS WELL</p>
+    </div>
+    <div class="winner max-w-[1280px] mx-auto mt-10">
+        <div class="flex justify-center">
+            <div
+                class="title bg-[url(/assets/images/home/pastel.png)] bg-contain bg-no-repeat flex gap-x-4 items-center">
+                <div class="left">
+                    <img src="/assets/images/home/icons/winner.png">
+                </div>
+                <div class="right">
+                    <h4 class="font-bold text-[22px]">AK247 PRO WINNER'S</h4>
+                </div>
             </div>
         </div>
-        <div class="box scale-[0.9] flex w-1/3 gap-x-4 rounded-tr-[100px]  p-4"
-            style="box-shadow: 0px 4px 14px 0px #00000040;">
-            <div class="left w-1/3">
-                <img src="/assets/images/home/winner.png" class="w-full" alt="">
-            </div>
-            <div class="right w-2/3">
-                <h5 class="text-black font-bold text-[25px]">
-                    DEEPAK
-                </h5>
-                <h6 class="text-[#FF3F3F] font-bold text-[20px]">WON ₹3.5 LAKH+</h6>
-                <p class="text-[#757575] mt-4">I NEVER KNEW POOL WAS SUCH AN EASY GAMES. I STARTED PLAYING POOL ON WINZO
-                    AND NOW I PLAY POOL EVERYDAY AND WIN PRIZES WHILE ENJOYING THE GAME AS WELL</p>
+        <div class="px-5 mt-4">
+            <div class="flex md:gap-x-[50px] mt-1 w-full relative">
+                <div class="box flex md:gap-x-4 rounded-tr-[100px] w-1/3  gap-x-2 md:p-4 p-1 min-w-[290px] border-4 border-[#FF8181]"
+                    style="box-shadow: 0px 4px 14px 0px #00000040;">
+                    <div class="left md:w-1/3 w-[60px]">
+                        <img src="/assets/images/home/winner.png" class="w-full" alt="">
+                    </div>
+                    <div class="right md:w-2/3">
+                        <h5 class="text-black font-bold md:text-[25px] text-[12px]">
+                            DEEPAK
+                        </h5>
+                        <h6 class="text-[#FF3F3F] font-bold md:text-[20px] text-[10px]">WON ₹3.5 LAKH+</h6>
+                        <p class="text-[#757575] mt-4 md:text-[16px] text-[8px]">I NEVER KNEW POOL WAS SUCH AN EASY
+                            GAMES. I STARTED PLAYING POOL ON
+                            WINZO
+                            AND</p>
+                    </div>
+                </div>
+                <div class="box bg-white flex md:gap-x-4 rounded-tr-[100px]  gap-x-2 md:p-4 p-1 min-w-[290px] border-4 border-[#FF8181] absolute  w-1/3 left-[50%]  z-[9] -translate-x-[50%]"
+                    style="box-shadow: 0px 4px 14px 0px #00000040;">
+                    <div class="left md:w-1/3 w-[60px]">
+                        <img src="/assets/images/home/winner.png" class="w-full" alt="">
+                    </div>
+                    <div class="right md:w-2/3">
+                        <h5 class="text-black font-bold md:text-[25px] text-[12px]">
+                            DEEPAK
+                        </h5>
+                        <h6 class="text-[#FF3F3F] font-bold md:text-[20px] text-[10px]">WON ₹3.5 LAKH+</h6>
+                        <p class="text-[#757575] mt-4 md:text-[16px] text-[8px]">I NEVER KNEW POOL WAS SUCH AN EASY
+                            GAMES. I STARTED PLAYING POOL ON
+                            WINZO
+                            AND</p>
+                    </div>
+                </div>
+
+                <div class="box bg-white flex md:gap-x-4 rounded-tr-[100px]  gap-x-2 md:p-4 p-1 min-w-[290px] border-4 border-[#FF8181] absolute right-0 w-1/3"
+                    style="box-shadow: 0px 4px 14px 0px #00000040;">
+                    <div class="left md:w-1/3 w-[60px]">
+                        <img src="/assets/images/home/winner.png" class="w-full" alt="">
+                    </div>
+                    <div class="right md:w-2/3">
+                        <h5 class="text-black font-bold md:text-[25px] text-[12px]">
+                            DEEPAK
+                        </h5>
+                        <h6 class="text-[#FF3F3F] font-bold md:text-[20px] text-[10px]">WON ₹3.5 LAKH+</h6>
+                        <p class="text-[#757575] mt-4 md:text-[16px] text-[8px]">I NEVER KNEW POOL WAS SUCH AN EASY
+                            GAMES. I STARTED PLAYING POOL ON
+                            WINZO
+                            AND</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
