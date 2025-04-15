@@ -141,7 +141,7 @@ export class HomeComponent {
       this.categories[cIndex].games[activeIndex+1].isActive = true;
     }
     
-    if (slider && itemWidth && activeIndex>0) {
+    if (slider && itemWidth && activeIndex>0 && activeIndex<this.categories[cIndex].games.length-2) {
       const scrollAmount = slider.scrollLeft+itemWidth;
       slider.scrollTo({ left: scrollAmount, behavior: "smooth" });
     }

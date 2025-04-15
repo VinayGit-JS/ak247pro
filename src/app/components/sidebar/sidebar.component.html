@@ -1,15 +1,51 @@
-<div class="sidebar md:block hidden">
-    <div class="bg-[#FFFFFF1A]  px-2 rounded-xl min-w-[200px] py-[20px]">
-        <div class="logo bg-white px-4 py-2 rounded-full">
-            <img class="w-[150px]" src="/assets/images/logo.svg" alt="">
-        </div>
-        <ul class="mt-5 space-y-2 px-[4px]">
-            <li *ngFor="let item of menuItems">
-                <a href="#" [classList]="'flex items-center gap-x-2 gap-3 p-3 hover:bg-teal-600 rounded-md '+ (item.active?'bg-white text-black': 'text-white')">
-                    <img [src]="item.icon" alt="" class="w-[20px] h-[20px]">
-                    {{ item.text }}
-                </a>
-            </li>
-        </ul>
+<ul class="mt-5 space-y-2 px-[4px] min-w-[200px] md:block hidden">
+    <li *ngFor="let item of menuItems">
+      <a [routerLink]="item.route"
+         routerLinkActive="active"
+         class="flex items-center gap-x-2 gap-3 p-3 hover:bg-teal-600 rounded-md text-white"
+         [routerLinkActiveOptions]="{ exact: true }">
+        <img [src]="item.icon" alt="" class="w-[20px] h-[20px]">
+        {{ item.text }}
+      </a>
+    </li>
+  </ul>
+  
+
+  <div class="sm:hidden block">
+    <!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 h-[60px] bg-teal-600 flex justify-around items-center py-1 z-50 shadow-lg">
+  
+    <!-- Profile -->
+    <div class="flex flex-col items-center text-white">
+      <img onclick="window.location.href='profile'" src="/assets/icons/pfofile.png" alt="">
+      <!-- <span class="text-sm">Profile</span> -->
     </div>
+  
+    <!-- Report -->
+    <div class="flex flex-col items-center text-white">
+      <img onclick="window.location.href='report'" src="/assets/icons/report.png" alt="">
+      <!-- <span class="text-sm">Report</span> -->
+    </div>
+  
+    <!-- Floating Home Button -->
+    <div class="relative -top-8">
+      <div class="bg-teal-600 h-16 w-16 rounded-full border-4 border-white flex items-center justify-center shadow-md">
+        <img onclick="window.location.href='home'" src="/assets/icons/home.png" alt="">
+      </div>
+      <!-- <div class="text-center text-white text-sm mt-1">Home</div> -->
+    </div>
+  
+    <!-- Referral -->
+    <div class="flex flex-col items-center text-white">
+      <img  src="/assets/icons/refer.png" alt="">
+      <!-- <span class="text-sm">Referral</span> -->
+    </div>
+  
+    <!-- Logout -->
+    <div class="flex flex-col items-center text-white">
+      <img src="/assets/icons/logout.png" alt="">
+      <!-- <span class="text-sm">Logout</span> -->
+    </div>
+  </div>
+  
 </div>

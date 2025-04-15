@@ -33,7 +33,7 @@
     .item {
       min-width: calc(20% - 18px);
       max-width: calc(20% - 18px);
-      scroll-snap-align: start;
+      scroll-snap-align: center;
     }
 
     &::-webkit-scrollbar {
