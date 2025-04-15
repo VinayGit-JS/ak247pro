@@ -5,6 +5,9 @@ import { SignupComponent } from './components/signup/signup.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ReportsComponent } from './pages/reports/reports.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { WingoComponent } from './pages/wingo/wingo.component';
+import { WingoSmallComponent } from './components/wingo-small/wingo-small.component';
+import { WingoBigComponent } from './components/wingo-big/wingo-big.component';
 
 // Define the application routes
 export const appRoutes: Routes = [
@@ -16,5 +19,9 @@ export const appRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },  // Home page route    
     { path: 'report', component: ReportsComponent },  // Home page route  \  
     { path: 'profile', component: ProfileComponent },  // Home page route  \  
+    { path: 'wingo', component: WingoComponent },  // Home page route  \  
+    { path: 'wingo-big', component: WingoBigComponent },  // Home page route  \  
+    { path: 'wingo-small', component: WingoSmallComponent },  // Home page route  \  
+
 
 ];

@@ -1,0 +1,64 @@
+<div class="dashboard-body">
+    <app-sidebar></app-sidebar>
+    <div class="main">
+        <div class="px-8 py-4">
+            <div class="border rounded-[4px] overflow-hidden shadow-lg">
+                <!-- Header -->
+                <div
+                    class="bg-gradient-to-r my-2 from-[#6EA8F4] to-orange-[#FFFFFF] border md:mx-[40px] mx-[10px]  rounded-[60px]">
+                    <div class="bg-[url('/assets/images/wingo/bg.png')] px-6 py-4 flex flex-col items-center rounded-[60px] ">
+                        <h2 class="text-2xl font-[900] text-white" style="-webkit-text-stroke: 1px black;">Win Go 30s
+                        </h2>
+                        <div class="mt-2 bg-white px-6 py-2 rounded-full shadow-inner font-medium text-gray-700">
+                            Select Big
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Balance -->
+                <div class="border-t-2 border-[#6EA8F4] p-4 flex justify-between flex-wrap ">
+                    <label class="block font-medium text-gray-700 mb-1">Balance</label>
+                    <div class="flex gap-2 text-[12px] xsm:text-[16px]">
+                        <button class="border-2 border-[#6EA8F4] px-4 py-1 rounded-md">1</button>
+                        <button class="border-2 border-[#6EA8F4] px-4 py-1 rounded-md">10</button>
+                        <button class="border-2 border-[#6EA8F4] px-4 py-1 rounded-md">100</button>
+                        <button class="border-2 border-[#6EA8F4] px-4 py-1 rounded-md">1000</button>
+                    </div>
+                </div>
+
+                <!-- Quantity -->
+                <div class="border-t-2 border-[#6EA8F4] p-4 flex justify-between flex-wrap ">
+                    <label class="block font-medium text-gray-700 mb-1">Quantity</label>
+                    <div class="flex gap-2 items-center text-[12px] xsm:text-[16px]">
+                        <button class="border-2 border-[#6EA8F4] px-3 py-1 font-bold rounded">-</button>
+                        <input type="text" value="1" class="w-16 text-center border-2 border-[#6EA8F4] rounded py-1" />
+                        <button class="border-2 border-[#6EA8F4] px-3 py-1 font-bold rounded">+</button>
+                    </div>
+                </div>
+
+                <!-- I agree & multipliers -->
+                <div class="border-t-2 border-[#6EA8F4] p-4 flex justify-between flex-wrap ">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-5 h-5 bg-[#6EA8F4] rounded-full flex items-center justify-center text-white">
+                            ✓
+                        </div>
+                        <span class="font-medium">I agree</span>
+                    </div>
+                    <div class="flex gap-2 text-[12px] xsm:text-[16px]">
+                        <button class="border-2 border-[#6EA8F4] px-4 py-1 rounded-md">X1</button>
+                        <button class="border-2 border-[#6EA8F4] px-4 py-1 rounded-md">10</button>
+                        <button class="border-2 border-[#6EA8F4] px-4 py-1 rounded-md">100</button>
+                        <button class="border-2 border-[#6EA8F4] px-4 py-1 rounded-md">1000</button>
+                    </div>
+                </div>
+
+                <!-- Footer Buttons -->
+                <div class="flex border-t-2 text-white text-center text-sm font-semibold">
+                    <button class="flex-1 bg-gray-300 text-gray-600 py-3">Cancel</button>
+                    <button class="flex-2 bg-[#6EA8F4] py-3">Total amount ₹500.00</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

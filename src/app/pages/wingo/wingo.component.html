@@ -1,0 +1,190 @@
+<div class="dashboard-body">
+    <app-sidebar></app-sidebar>
+    <div class="main">
+        <app-top-bar />
+        <div class="banner flex justify-center max-w-[1280px] mx-auto lg:px-8 px-2">
+            <img src="/assets/images/dashboard/banner.png" class="w-full" alt="">
+        </div>
+        <app-wallet-summery />
+        <div
+            class="wingo-clock-wrap gap-x-2 flex mx-2 lg:mx-8  bg-secondary-20 p-2 border-secondary border-2 rounded-xl my-4">
+            <div style="-webkit-text-stroke: 1px #000; background: linear-gradient(180deg, #20A2A0 0%, #FFFFFF 100%);"
+                class="wingo-clock font-[900] py-2 text-center flex flex-col items-center justify-center aspect-square w-[25%] border-secondary border-2 rounded-xl">
+                <img src="/assets/images/wingo/clock.png" class="w-[50px] md:w-[100px]" alt="">
+                <h3 class="text-white text-xs md:text-lg">Win Go</h3>
+                <h3 class="text-white text-xs md:text-lg">30s</h3>
+            </div>
+            <div style="-webkit-text-stroke: 1px #000; background: #efefef;"
+                class="wingo-clock font-[900] py-2 text-center flex flex-col items-center justify-center aspect-square w-[25%] border-secondary border-2 rounded-xl">
+                <img src="/assets/images/wingo/clock.png" class="w-[50px] md:w-[100px]" style="filter: grayscale(0.8);" alt="">
+                <h3 class="text-white text-xs md:text-lg">Win Go</h3>
+                <h3 class="text-white text-xs md:text-lg">1 min</h3>
+            </div>
+            <div style="-webkit-text-stroke: 1px #000; background: #efefef;"
+                class="wingo-clock font-[900] py-2 text-center flex flex-col items-center justify-center aspect-square w-[25%] border-secondary border-2 rounded-xl">
+                <img src="/assets/images/wingo/clock.png" class="w-[50px] md:w-[100px]" style="filter: grayscale(0.8);" alt="">
+                <h3 class="text-white text-xs md:text-lg">Win Go</h3>
+                <h3 class="text-white text-xs md:text-lg">3 min</h3>
+            </div>
+            <div style="-webkit-text-stroke: 1px #000; background: #efefef;"
+                class="wingo-clock font-[900] py-2 text-center flex flex-col items-center justify-center aspect-square w-[25%] border-secondary border-2 rounded-xl">
+                <img src="/assets/images/wingo/clock.png" class="w-[50px] md:w-[100px]" style="filter: grayscale(0.8);" alt="">
+                <h3 class="text-white text-xs md:text-lg">Win Go</h3>
+                <h3 class="text-white text-xs md:text-lg">5 min</h3>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 px-2 gap-x-2">
+            <div class="p-4 text-center border-2 border-secondary rounded-xl flex justify-center flex-col"
+                style="background: linear-gradient(264.88deg, #20A2A0 0%, #FFFFFF 104.93%);">
+                <h5 class="text-white font-[900] text-[16px]" style="-webkit-text-stroke: 1px #000;">
+
+                    Win Go 30 Sec
+                </h5>
+                <div class="flex justify-center gap-x-1 mt-2">
+                    <div *ngFor="let n of [6,1,0,5,2]" class="chip">
+                        <img [src]="'/assets/images/wingo/'+n+'.png'" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 text-center border-2 border-secondary rounded-xl"
+                style="background: linear-gradient(264.88deg, #20A2A0 0%, #FFFFFF 104.93%);">
+                <h5 class="text-white font-[900] text-[16px]" style="-webkit-text-stroke: 1px #000;">
+
+                    Time remaining
+                </h5>
+                <div class="flex justify-center gap-x-1 mt-2">
+                    <div class="bg-white w-[25px] flex justify-center items-center h-[25px] rounded-sm">
+                        0
+                    </div>
+                    <div class="bg-white w-[25px] flex justify-center items-center h-[25px] rounded-sm">
+                        0
+                    </div>
+                    <div class="bg-white w-[25px] flex justify-center items-center h-[25px] rounded-sm">
+                        :
+                    </div>
+                    <div class="bg-white w-[25px] flex justify-center items-center h-[25px] rounded-sm">
+                        2
+                    </div>
+                    <div class="bg-white w-[25px] flex justify-center items-center h-[25px] rounded-sm">
+                        7
+                    </div>
+                </div>
+                <h5 class="text-white font-[900] text-[12px] mt-2" style="-webkit-text-stroke: 1px #000;">
+                    20250406100051773
+                </h5>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 px-2 gap-x-2 my-4">
+            <div class="border-1 border-black rounded-xl p-2">
+                <div class="color flex gap-x-2">
+                    <div
+                        class="bg-[#18B660] text-white flex-1 text-center py-1 border-1 border-black rounded-tr-2xl rounded-bl-2xl text-[10px]">
+                        Green
+                    </div>
+                    <div
+                        class="bg-[#C86EFF] text-white flex-1 text-center py-1 border-1 border-black rounded-md text-[10px]">
+                        Violet
+                    </div>
+                    <div
+                        class="bg-[#FB5B5B] text-white flex-1 text-center py-1 border-1 border-black rounded-tl-2xl rounded-br-2xl text-[10px]">
+                        Red
+                    </div>
+                </div>
+                <div class="chips grid grid-cols-5 mt-2 gap-x-4">
+                    <div *ngFor="let n of [1,2,3,4,5,6,7,8,9,0]" class="chip">
+                        <img class="w-full" [src]="'/assets/images/wingo/'+n+'.png'" alt="">
+                    </div>
+                </div>
+                <div class="flex justify-center my-4">
+                    <button class="border border-secondary rounded-full text-secondary px-6 py-1">Random</button>
+                </div>
+
+                <div class="multiplier flex justify-center gap-x-2 text-[10px] font-[500]">
+                    <div
+                        class="bg-[#00D457] w-[35px] border-1 border-1 border-secondary flex justify-center items-center h-[35px] rounded-sm">
+                        1x
+                    </div>
+                    <div
+                        class="bg-white w-[35px] border-1 border-1 border-secondary flex justify-center items-center h-[35px] rounded-sm">
+                        5x
+                    </div>
+                    <div
+                        class="bg-white w-[35px] border-1 border-1 border-secondary flex justify-center items-center h-[35px] rounded-sm">
+                        20x
+                    </div>
+                    <div
+                        class="bg-white w-[35px] border-1 border-1 border-secondary flex justify-center items-center h-[35px] rounded-sm">
+                        50x
+                    </div>
+                    <div
+                        class="bg-white w-[35px] border-1 border-1 border-secondary flex justify-center items-center h-[35px] rounded-sm">
+                        100x
+                    </div>
+                </div>
+
+                <div class="big-small flex text-white text-[16px]  my-6">
+                    <div class="big rounded-l-full bg-[#FEAA57] flex-1 text-center py-1">
+                        Big
+                    </div>
+                    <div class="small rounded-r-full bg-[#6EA8F4] flex-1 text-center py-1">
+                        Small
+                    </div>
+                </div>
+            </div>
+            <div class="border-1 border-black rounded-xl p-2">
+                <div class="color flex gap-x-2">
+                    <div style="background: linear-gradient(264.52deg, #FFFFFF -37.18%, #20A2A0 56.14%);"
+                        class="text-white flex-1 text-center py-1 border-1 border-black rounded-tr-2xl rounded-bl-2xl text-[10px]">
+                        Game history
+                    </div>
+                    <div
+                        class="bg-[#D8D8D880] text-black flex-1 text-center py-1 border-1 border-black rounded-md text-[10px]">
+                        Chart
+                    </div>
+                    <div
+                        class="bg-[#D8D8D880] text-black flex-1 text-center py-1 border-1 border-black rounded-tl-2xl rounded-br-2xl text-[10px]">
+                        My history
+                    </div>
+                </div>
+
+                <table class="mt-5 w-full border-b-1">
+                    <tr class="border-y-secondary border-y-2 ">
+                        <th class="py-2 px-1 font-[500]">Period</th>
+                        <th class="py-2 px-1 font-[500]">Number</th>
+                        <th class="py-2 px-1 font-[500]">Big Small</th>
+                        <th class="py-2 px-1 font-[500]">Colour</th>
+                    </tr>
+                    <tr *ngFor="let row of historyData">
+                        <td class="text-center py-2">{{ row.period }}</td>
+                        <td class="text-center py-2" [ngStyle]="{
+                            color: row.color.includes('linear') ? '#aa00ff' : row.color
+                          }" class="font-bold text-center">
+                            {{ row.number }}
+                        </td>
+                        <td class="text-center py-2 font-bold">{{ row.type }}</td>
+                        <td class="text-center py-2">
+                            <div class="flex justify-center">
+                                <div class="w-[15px] h-[15px] rounded-full" [ngStyle]="row.color.includes('linear') ? {
+                              background: row.color
+                            } : {
+                              backgroundColor: row.color
+                            }"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="pagination flex justify-center items-center gap-x-6 mt-5">
+                    <div class="left">
+                        <img src="/assets/icons/arrow-left-theme.svg" alt="">
+                    </div>
+                    <div class="index font-[500]">
+                        1/3477
+                    </div>
+                    <button class="bg-secondary rounded-md right">
+                        <img src="/assets/icons/arrow-left-white.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

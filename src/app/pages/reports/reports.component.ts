@@ -24,7 +24,8 @@ export class ReportsComponent {
       select: 'SMALL',
       status: 'SUCCESS',
       winLoss: 500,
-      closingBalance: 500
+      closingBalance: 500,
+      active:true
     },
     {
       date: '2025-03-31 18:03:14',
