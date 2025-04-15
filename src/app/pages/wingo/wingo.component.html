@@ -155,14 +155,14 @@
                         <th class="py-2 px-1 font-[500]">Colour</th>
                     </tr>
                     <tr *ngFor="let row of historyData">
-                        <td class="text-center py-2">{{ row.period }}</td>
-                        <td class="text-center py-2" [ngStyle]="{
+                        <td class="text-center text-[12px] md:text-[16px] py-2">{{ row.period }}</td>
+                        <td class="text-center text-[12px] md:text-[16px] py-2" [ngStyle]="{
                             color: row.color.includes('linear') ? '#aa00ff' : row.color
                           }" class="font-bold text-center">
                             {{ row.number }}
                         </td>
-                        <td class="text-center py-2 font-bold">{{ row.type }}</td>
-                        <td class="text-center py-2">
+                        <td class="text-center text-[12px] md:text-[16px] py-2 font-bold">{{ row.type }}</td>
+                        <td class="text-center text-[12px] md:text-[16px] py-2">
                             <div class="flex justify-center">
                                 <div class="w-[15px] h-[15px] rounded-full" [ngStyle]="row.color.includes('linear') ? {
                               background: row.color
